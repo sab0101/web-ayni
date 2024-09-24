@@ -5,32 +5,23 @@ body{
 }
 #mc{
     background-color: #1f4b66;
-    width: 1390px;
-    height: 1040px;
+    width: 100%;
+    height: 220px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     padding: 20px
 }
-.alto{
-    background-color: #1f4b66;
-    width: 900px;
-    height: 820px;
-    border-radius: 29px;
-    display: flex;
-    flex-direction: column;
-    padding: 20px
-}
-.bajo{
-    background-color: rgb(101, 213, 101);
-    height: 59px;
-    width: 669px;
-    border-radius: 29px;
-    color: white;
-    font-size: 20pt;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.h1{
-    justify-content: flex-end;
+.azul{
+    display:flex; 
+    justify-content: space-between;
     color: white;
 }
+.buscador{
+    width: 25%;
+    height: 50px;
+}
+.menu{
+    
+}
+]
