@@ -41,6 +41,9 @@ body{
 #canasta{
     margin-left: 20px;
 }
+#menu1{
+    background-color: #ffffff;
+}
 #verde{
     background-color: #88C44D;
     display: flex;
