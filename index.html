@@ -1,57 +1,369 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onda Ayni</title>
-    <link rel="stylesheet" href="CSS/styleayni.css">
+    <title>Onda Ayni - Productos Orgánicos Peruanos | Precio Justo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="mc" class="alto">
-        <header id="header" class="header1">
-            <div id="azul" class="azul1">
-                <picture>
-                    <img id="piclogo" src="ASSETS/Onayni2 1.png">
-                </picture>
-                <input type=text id="buscador" class="buscador1" placeholder="buscador">
-                <div id="menu" class="menu1">
-                    <div id="cuenta" class="cuenta1">
-                        <a href="cuentax">
-                            <img id="cuentalogo" src="ASSETS/user.png">
-                            <p id="p-menu">mi cuenta</p>
-                        </a>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="ASSETS/Onayni1.jpg" alt="Logo Onda Ayni" class="logo-img">
+                    <div class="logo-text">
+                        <h1>Onda Ayni</h1>
+                        <p>Reciprocidad que nutre</p>
                     </div>
-                    <div id="canasta" class="canasta1">
-                        <a href="canatax">
-                            <img id="canastalogo" src="ASSETS/basket.png">
-                            <p id="p-menu">canasta</p>
-                        </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="#inicio" class="nav-link active"><i class="fas fa-home"></i> Inicio</a></li>
+                        <li><a href="#productos" class="nav-link"><i class="fas fa-store"></i> Productos</a></li>
+                        <li><a href="#nosotros" class="nav-link"><i class="fas fa-users"></i> Nosotros</a></li>
+                        <li><a href="#impacto" class="nav-link"><i class="fas fa-handshake"></i> Impacto</a></li>
+                        
+                        <!-- Contenedor para elementos del lado derecho -->
+                        <div class="nav-right-items">
+                            <!-- Selector de idioma CORREGIDO -->
+                            <li class="nav-icon language-nav-item">
+                                <div class="language-selector">
+                                    <button class="language-btn" id="languageBtn" title="Cambiar idioma">
+                                        <i class="fas fa-globe"></i>
+                                        <span id="languageText">ES</span>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <div class="language-dropdown" id="languageDropdown">
+                                        <a href="#" class="language-option" data-lang="es">
+                                            <span class="flag">🇪🇸</span> Español
+                                        </a>
+                                        <a href="#" class="language-option" data-lang="en">
+                                            <span class="flag">🇺🇸</span> English
+                                        </a>
+                                        <a href="#" class="language-option" data-lang="fr">
+                                            <span class="flag">🇫🇷</span> Français
+                                        </a>
+                                        <a href="#" class="language-option" data-lang="de">
+                                            <span class="flag">🇩🇪</span> Deutsch
+                                        </a>
+                                        <a href="#" class="language-option" data-lang="zh">
+                                            <span class="flag">🇨🇳</span> 中文
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <li class="nav-icon">
+                                <a href="#carrito" class="cart-btn" id="cartBtn">
+                                    <i class="fas fa-shopping-basket"></i>
+                                    <span class="cart-count" id="cartCount">0</span>
+                                </a>
+                            </li>
+                            <li class="nav-icon">
+                                <a href="#perfil" class="profile-btn">
+                                    <i class="fas fa-user-circle"></i>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Productos Orgánicos <span class="highlight peru">Peruanos</span><br>
+                    con <span class="highlight justo">Precio Justo</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Descubre la auténtica riqueza de los Andes. Cada compra apoya directamente 
+                    a las comunidades agrícolas y promueve prácticas regenerativas.
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#productos" class="btn btn-primary">
+                        <i class="fas fa-seedling"></i> Explorar Productos
+                    </a>
+                    <a href="#nosotros" class="btn btn-secondary">
+                        <i class="fas fa-handshake"></i> Conoce Nuestra Historia
+                    </a>
+                </div>
+                
+                <!-- Sellos de garantía -->
+                <div class="badges">
+                    <div class="badge">
+                        <div class="badge-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <span class="badge-text">100% Orgánico Certificado</span>
                     </div>
-                </div>    
-            </div>
-            <div id="verde" class="verde1">
-                <div id="cate" class="cate1">
-                    <picture>
-                        <img id="listado" src="ASSETS/solar_list-broken.png">
-                    </picture>
-                    <p id="categorías" alt="cat">categorías</p>
-                </div>
-                <p id="nosotros" class="nosotros1">nosotros</p>
-                <p id="responsabilidad social" class="rse">responsabilidad social</p>
-                <p id="certificaciones" class="cert">certificaciones</p>
-            </div>
-        </header>
-            <div id="blanco" class="bnc1">
-                <div id=foto class=fot1>
-                    <picture>
-                        <img id="foto" src="ASSETS/the-5th-jkDLNDGougw-unsplash 1.png">
-                    </picture>
-                    <form>
-                        <input id="Compra" class="susc" type="button" value="Suscríbete" >
-                    </form>
-                    <p style= "margin-top:-190px;">Suscríbete a la canasta mensual. <br> Elige 6 productos, y mensualmente te lo llevamos</p>
+                    <div class="badge">
+                        <div class="badge-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <span class="badge-text">Precio Justo Garantizado</span>
+                    </div>
+                    <div class="badge">
+                        <div class="badge-icon">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <span class="badge-text">Envases Sostenibles</span>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Sección de Productos -->
+    <section class="products-section" id="productos">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestros Productos Estrella</h2>
+                <p class="section-subtitle">Selección premium de los Andes Peruanos, cultivados con amor y respeto</p>
+            </div>
+            
+            <div class="products-grid" id="productsGrid">
+                <!-- Los productos se cargan con JavaScript -->
+            </div>
+            
+            <div class="section-footer">
+                <a href="#todos-productos" class="btn btn-outline">
+                    <i class="fas fa-store"></i> Ver todos los productos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Quiénes Somos -->
+    <section class="about-section" id="nosotros">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Más que una marca, un compromiso de <span class="highlight">Ayni</span></h2>
+                    <p>
+                        En la cosmovisión andina, <strong>Ayni</strong> representa la reciprocidad sagrada entre 
+                        las personas y la Pachamama (Madre Tierra). Es un intercambio armonioso donde 
+                        cada acción tiene una respuesta equilibrada.
+                    </p>
+                    <p>
+                        En Onda Ayni, hemos hecho de este principio milenario nuestra filosofía central. 
+                        Trabajamos <strong>directamente con cooperativas de pequeños agricultores</strong> en las regiones 
+                        andinas, eliminando intermediarios y garantizando un pago justo que supera hasta 
+                        en un 40% los precios del mercado convencional.
+                    </p>
+                    
+                    <ul class="about-features">
+                        <li>
+                            <span class="feature-icon">
+                                <i class="fas fa-check"></i>
+                            </span>
+                            Comercio directo sin intermediarios
+                        </li>
+                        <li>
+                            <span class="feature-icon">
+                                <i class="fas fa-check"></i>
+                            </span>
+                            Agricultura regenerativa y sostenible
+                        </li>
+                        <li>
+                            <span class="feature-icon">
+                                <i class="fas fa-check"></i>
+                            </span>
+                            Transparencia total en la cadena de valor
+                        </li>
+                        <li>
+                            <span class="feature-icon">
+                                <i class="fas fa-check"></i>
+                            </span>
+                            Apoyo a proyectos educativos comunitarios
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="visual-main">
+                        <div class="visual-pattern"></div>
+                        <div class="visual-content">
+                            <img src="ASSETS/Onayni1.jpg" alt="Logo Onda Ayni" class="visual-logo">
+                            <div class="visual-text">
+                                Reciprocidad<br>que Transforma
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Impacto Social -->
+    <section class="impact-section" id="impacto">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestro Impacto en Números</h2>
+                <p class="section-subtitle">El poder transformador de cada compra consciente</p>
+            </div>
+            
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="impact-number">+2,500</div>
+                    <div class="impact-label">Familias agricultoras apoyadas</div>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="impact-number">15,000<span class="stat-unit">ha</span></div>
+                    <div class="impact-label">Tierra bajo cultivo regenerativo</div>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="impact-number">+45%</div>
+                    <div class="impact-label">Ingresos para comunidades</div>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="impact-number">100%</div>
+                    <div class="impact-label">Productos con precio justo</div>
+                </div>
+            </div>
+            
+            <div class="impact-details">
+                <div class="impact-detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Custodia Ambiental</h3>
+                    <p>Promovemos prácticas que regeneran el suelo y protegen la biodiversidad andina.</p>
+                </div>
+                <div class="impact-detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Comunidades Fortalecidas</h3>
+                    <p>Invertimos en educación, salud e infraestructura para las comunidades productoras.</p>
+                </div>
+                <div class="impact-detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Capacitación Continua</h3>
+                    <p>Formamos a los agricultores en técnicas sostenibles y gestión empresarial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="ASSETS/Onayni1.jpg" alt="Logo Onda Ayni" class="footer-logo-img">
+                    <h3 class="footer-logo">Onda Ayni</h3>
+                    <p class="footer-tagline">
+                        Comercio con Conciencia,<br>
+                        Consumo con Propósito.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4 class="link-title">Productos</h4>
+                        <a href="#" class="footer-link">Superfoods</a>
+                        <a href="#" class="footer-link">Café & Tés</a>
+                        <a href="#" class="footer-link">Snacks & Dulces</a>
+                        <a href="#" class="footer-link">Harinas & Granos</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4 class="link-title">Empresa</h4>
+                        <a href="#" class="footer-link">Nuestra Historia</a>
+                        <a href="#" class="footer-link">Impacto Social</a>
+                        <a href="#" class="footer-link">Trabaja con Nosotros</a>
+                        <a href="#" class="footer-link">Contacto</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4 class="link-title">Ayuda</h4>
+                        <a href="#" class="footer-link">Preguntas Frecuentes</a>
+                        <a href="#" class="footer-link">Envíos y Entregas</a>
+                        <a href="#" class="footer-link">Cambios y Devoluciones</a>
+                        <a href="#" class="footer-link">Guía de Productos</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">
+                    &copy; <span id="currentYear"></span> Onda Ayni. Todos los derechos reservados.<br>
+                    Hecho con <i class="fas fa-heart"></i> en los Andes Peruanos
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Carrito de Compras -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3 class="cart-title">
+                <i class="fas fa-shopping-basket"></i> Tu Canasta
+            </h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-basket"></i>
+                <p>Tu canasta está vacía</p>
+                <p class="empty-subtitle">¡Agrega algunos productos orgánicos!</p>
+            </div>
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-amount" id="cartTotal">S/ 0.00</span>
+            </div>
+            <button class="btn btn-checkout" id="checkoutBtn">
+                <i class="fas fa-lock"></i> Proceder al Pago
+            </button>
+            <button class="btn btn-clear" id="clearCartBtn">
+                Vaciar Canasta
+            </button>
+        </div>
     </div>
+    
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
